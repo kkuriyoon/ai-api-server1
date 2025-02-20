@@ -1,2 +1,42 @@
-POST https://ominous-goggles-7g9ggwq74rgfwp95-8000.app.github.dev/train
+#POST https://ominous-goggles-7g9ggwq74rgfwp95-8000.app.github.dev/train
+
+##
+
+### (1) AND 모델 학습
+POST http://127.0.0.1:8000/train/and
+Content-Type: application/json
+
+
+### (2) AND 모델 예측 (0,1)
+GET http://127.0.0.1:8000/predict/and/0/1
+Content-Type: application/json
+
+
+### (3) OR 모델 학습
+POST http://127.0.0.1:8000/train/or
+Content-Type: application/json
+
+
+### (4) OR 모델 예측 (0,1)
+GET http://127.0.0.1:8000/predict/or/1/1
+Content-Type: application/json
+
+
+### (5) NOT 모델 학습
+POST http://127.0.0.1:8000/train/not
+Content-Type: application/json
+
+
+### (6) NOT 모델 예측 (1,1)
+GET http://127.0.0.1:8000/predict/not/1/1
+Content-Type: application/json
+
+
+### (7) XOR 모델 학습 (PyTorch MLP)
+POST http://127.0.0.1:8000/train/xor
+Content-Type: application/json
+
+
+### (8) XOR 모델 예측 (0,1)
+GET http://127.0.0.1:8000/predict/xor/0/1
 Content-Type: application/json
